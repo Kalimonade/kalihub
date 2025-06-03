@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kalihub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(to bottom, #ccc, #888);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #333;
+      text-shadow: 1px 1px 1px #eee;
+      font-weight: bold;
+      font-size: 32px;
+    }
+
+    .header-buttons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .header-buttons a,
+    .header-buttons button {
+      background: linear-gradient(to bottom, #eee, #ccc);
+      border: 2px solid #999;
+      border-radius: 4px;
+      padding: 8px 16px;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 1px 1px 2px #bbb;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+      text-decoration: none;
+      font-size: 14px;
+      user-select: none;
+    }
+
+    .header-buttons a {
+      font-weight: normal;
+      color: #333;
+      border: none;
+      background: none;
+      box-shadow: none;
+      cursor: pointer;
+      padding: 6px 10px;
+      margin-right: -8px; /* To visually pull it closer to Sign In button */
+      font-weight: bold; /* As requested */
+    }
+
+    .header-buttons a:hover,
+    .header-buttons button:hover {
+      background: linear-gradient(to bottom, #ddd, #bbb);
+      border-color: #666;
+      color: #000;
+    }
+
+    .header-buttons button {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px 20px 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    main h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 1px #eee;
+    }
+
+    main p.tagline {
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: #555;
+      max-width: 500px;
+    }
+
+    .cta-button {
+      background: linear-gradient(to bottom, #eee, #ccc);
+      border: 2px solid #999;
+      border-radius: 4px;
+      padding: 14px 40px;
+      color: #333;
+      font-weight: bold;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 1px 1px 2px #bbb;
+      text-decoration: none;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+      margin-bottom: 60px;
+      display: inline-block;
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(to bottom, #ddd, #bbb);
+      border-color: #666;
+    }
+
+    .features {
+      max-width: 600px;
+      text-align: left;
+      font-size: 18px;
+      color: #444;
+    }
+
+    .features ul {
+      list-style: disc inside;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 40px;
+      font-size: 14px;
+      color: #777;
+      border-top: 1px solid #ddd;
+      background: #fafafa;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>kalihub</h1>
+    <div class="header-buttons">
+      <a href="#">Testimonials</a>
+      <a href="#">About</a>
+      <button onclick="location.href='signup.html'">Sign In</button>
+    </div>
+  </header>
+  <main>
+    <h2>Welcome to kalihub</h2>
+    <p class="tagline">Simple. Straightforward. Community-driven.</p>
+    <a href="signup.html" class="cta-button">Get Started</a>
+    <section class="features">
+      <h3>Features</h3>
+      <ul>
+        <li>Host your code repositories with ease</li>
+        <li>Collaborate with others on projects</li>
+        <li>Simple interface you’ll love</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    &copy; 2008–2025 kalihub. All rights reserved.
+  </footer>
+</body>
+</html>
