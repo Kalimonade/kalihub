@@ -99,5 +99,20 @@
 
     <a href="index.html" class="back-link">&larr; Back to Home</a>
   <form action="loading.html" onsubmit="return validateForm()">
+
+    <script>
+  const form = document.querySelector('form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Stop the normal submission (no URL params)
+
+    // Optionally validate here if needed (or rely on HTML5 validation)
+
+    // Only redirect if form is valid
+    if (form.checkValidity()) {
+      window.location.href = 'loading.html';
+    }
+  });
+</script>
+
 </body>
 </html>
