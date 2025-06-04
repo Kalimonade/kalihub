@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Authorize App</title>
+  <style>
+    body {
+      background-color: #f1ece6;
+      color: #000;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: disc;
+      text-align: left;
+      margin: 0 auto 30px;
+      padding-left: 20px;
+      max-width: 300px;
+      color: #444;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: 2px solid #aaa;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(to bottom, #fff, #ddd);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to bottom, #eee, #ccc);
+    }
+
+    button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .authorize {
+      color: green;
+      border-color: #7ab87a;
+    }
+
+    .cancel {
+      color: #444;
+      border-color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    Are you sure you want to authorize <span class="italic">kalihub social</span>?
+  </h1>
+
+  <p>This app is requesting to access your kalihub account.
+  
+  <p><strong>What <span class="italic">kalihub social</span> will have access to:</strong></p>
+  <ul>
+    <li>Read your display name and username</li>
+   
+     <li>Read your profile picture</li>
+  </ul>
+
+  <div class="button-row">
+    <button class="authorize" onclick="authorize()">Authorize</button>
+    <button class="cancel" onclick="window.close()">Cancel</button>
+  </div>
+
+  <script>
+    function authorize() {
+      localStorage.setItem("kalihub_user", "example_user");
+      window.opener.postMessage({ status: "authorized", user: "example_user" }, "*");
+      window.close();
+    }
+  </script>
+</body>
+</html>
